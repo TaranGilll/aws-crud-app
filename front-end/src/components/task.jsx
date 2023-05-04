@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 
-class Student extends Component {
+class Task extends Component {
     render() {
         return (
             <div>
-                <p style={{color: "#339933"}}> { this.props.student.name } </p>
+                <p style={{color: "#339933"}}> { this.props.task.name } </p>
                 <button
-                    onClick = { () => this.props.onDelete(this.props.student.id)}
+                    onClick = { () => this.props.onDelete(this.props.task.id)}
                 >
                     Delete
                 </button>
                 <button
-                    onClick = { () => this.props.onEdit(this.props.student )}
+                    onClick = { () => this.props.onEdit(this.props.task )}
                 >
                     Edit
                 </button>   
@@ -20,4 +20,4 @@ class Student extends Component {
     }
 }
 
-export default Student;
+export default Task;

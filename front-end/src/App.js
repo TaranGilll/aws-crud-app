@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Students from './components/students'
+import Tasks from './components/tasks';
+import './App.css';
 
 class App extends Component {
 
@@ -108,24 +109,24 @@ class App extends Component {
     }
 
     render() {
-        return (
-            <div className="container" style={{display: "flex", flexDirection: "column", margin: "20px"}} >
-              <div style={{fontSize: "18px", color: "#0066ff"}}><b>Student List</b></div>
+        return (<div className="listContainer">
+            <div className="listBody" >
+              <div className="listHeader"><b>To Do List</b></div>
               <div style={{marginTop: "20px"}}>
                 <form onSubmit={ this.handleSubmit } >
-                    <input type="text" onChange={this.handleChange} placeholder="Enter name"/>
-                    <button style={{marginLeft: "5px", color: "#6600ff", border: "1px solid #6600ff"}}>Create Student</button>
+                    <input type="text" onChange={this.handleChange} placeholder="Enter task"/>
+                    <button className="createTaskBtn">Create Task</button>
                 </form>
               </div>
               <div style={{marginTop: "5px"}}>
-                <Students
-                  students={this.state.students}
+                <Tasks
+                  tasks={this.state.students}
                   onDelete={this.handleDelete}
                   onEdit={this.handleEdit}
                 />
               </div>
             </div>
-        );
+        </div>);
     }
 }
 
