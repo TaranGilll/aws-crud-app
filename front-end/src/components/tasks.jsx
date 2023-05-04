@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import Student from './student'
+import Task from './task'
 
-class Students extends Component {    
+class Tasks extends Component {    
     render() {
         return (
             <div>
-                { this.props.students.map(student => (
-                    <Student
-                        key={student.id}
+                { this.props.tasks.map(task => (
+                    <Task
+                        key={task.id}
                         onDelete={this.props.onDelete}
                         onEdit={this.props.onEdit}
-                        student={student}
+                        task={task}
                     />
                 ))}
             </div>
@@ -18,4 +18,4 @@ class Students extends Component {
     }
 }
 
-export default Students;
+export default Tasks;

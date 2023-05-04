@@ -1,0 +1,24 @@
+.listContainer {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    height: 100vh;
+}
+
+.listBody {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.listHeader {
+    font-size: 35px;
+    color: #0066ff;
+}
+
+.createTaskBtn {
+    margin-left: 5px;
+    color: #6600ff;
+    border: 1px solid #6600ff;
+}
+  
